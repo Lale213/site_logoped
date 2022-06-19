@@ -1,0 +1,11 @@
+{% extends 'logoped/base.html' %}
+
+{% block content %}
+<h1>{{post.title}}</h1>
+
+{% if post.file %}
+<p><img class="img-article-left" src="{{post.file.url}}"></p>
+{% endif %}
+
+{{post.content|linebreaks}}
+{% endblock %}
